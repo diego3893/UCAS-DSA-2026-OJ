@@ -15,8 +15,6 @@ struct Node{
 };
 
 void merge(int[], vector<Node>);
-// vector<Node> get_depth(int, vector<Node>);
-// bool cmp(const Node&, const Node&);
 
 int main(){
     vector<Node> tree;
@@ -78,20 +76,6 @@ int main(){
     }else{
         printf("No");
     }
-    // tree = get_depth(root, tree);
-    // sort(tree.begin(), tree.end(), cmp);
-    // int max_dep = tree.back().depth;
-    // int dep_cnt[max_dep+5];
-    // memset(dep_cnt, 0, sizeof(dep_cnt));
-    // for(int i=0; i<tree.size(); ++i){
-    //     dep_cnt[tree[i].depth]++;
-    // }
-    // for(int i=0; i<=max_dep; ++i){
-    //     if(dep_cnt[i] != pow(2, i)){
-    //         printf("No");
-    //         return 0;
-    //     }
-    // }
 
     return 0;
 }
@@ -107,32 +91,3 @@ void merge(int f[], vector<Node>t){
     }
     return;
 }
-
-// vector<Node> get_depth(int root, vector<Node> t){
-//     vector<Node> ans;
-//     stack<Node> s;
-//     Node cur = t[root];
-//     cur.depth = 0;
-//     ans.push_back(cur);
-//     s.push(cur);
-//     while(!s.empty()){
-//         Node tmp;
-//         cur = s.top();
-//         s.pop();
-//         if(cur.lc != -2){
-//             tmp = t[cur.lc];
-//             tmp.depth = cur.depth+1;
-//             ans.push_back(tmp);
-//         }
-//         if(cur.rc != -2){
-//             tmp = t[cur.rc];
-//             tmp.depth = cur.depth+1;
-//             ans.push_back(tmp);
-//         }
-//     }
-//     return ans;
-// }
-
-// bool cmp(const Node& a, const Node& b){
-//     return a.depth<b.depth;
-// }
