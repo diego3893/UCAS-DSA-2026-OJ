@@ -44,7 +44,7 @@ int main(){
     head_pat->succ->next = head_pat;
     q = head_pat->succ->succ;
     p = head_pat;
-    for(int i=2; i<=m; ++i){
+    while(q){
         while(p!=head_pat && p->succ->chdata!=q->chdata){
             p = p->next;
         }
