@@ -42,7 +42,6 @@ int main(){
         p->chdata = c;
     }
     head_pat->succ->next = head_pat;
-    int Index = 0;
     q = head_pat->succ->succ;
     p = head_pat;
     for(int i=2; i<=m; ++i){
